@@ -60,7 +60,12 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
+
+    // Zostawiamy tylko to (wersja jest brana z BOM):
     implementation(libs.androidx.material3)
+
+    // USUNIĘTO: implementation(libs.androidx.material3.android)
+
     //implementation(libs.androidx.navigation.compose.jvmstubs)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
@@ -71,8 +76,8 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
 
     implementation("androidx.navigation:navigation-compose:2.7.7")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.3")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2") // Zmieniłem na 2.6.2 dla bezpieczeństwa (zgodność z Kotlin 1.9.0)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2") // Zmieniłem na 2.6.2
     implementation("androidx.security:security-crypto:1.1.0-alpha06")
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     implementation("com.google.dagger:hilt-android:2.51.1")
